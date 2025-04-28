@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  background-color: #f0d9b5;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 1px 1px 2px #bbb;
+}
+
+#chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 60px);
+  grid-template-rows: repeat(8, 60px);
+  border: 2px solid #333;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  border-radius: 8px;
+  user-select: none;
+  position: relative;
+  overflow: visible;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.square.light {
+  background-color: #eeeed2;
+}
+
+.square.dark {
+  background-color: #769656;
+}
+
+.square.highlight {
+  background-color: #baca44;
+  box-shadow: 0 0 10px 3px #baca44aa;
+}
+
+.square:hover {
+  filter: brightness(1.1);
+  transition: filter 0.3s ease;
+}
+
+#status {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  text-shadow: 1px 1px 1px #eee;
+}
